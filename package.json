@@ -1,6 +1,6 @@
 {
   "name": "task-pool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A generic pool to limit number of running asynchronous tasks.",
   "keywords": ["task", "pool", "queue", "async"],
   "author": "Ali Farhadi <a.farhadi@gmail.com>",
