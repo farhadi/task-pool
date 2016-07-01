@@ -45,4 +45,13 @@ describe('Pool', function() {
     }
     return Promise.all(tasks).then(() => assert.equal(maxRun, 5));
   });
+
+  it('should emit timeout when a task exceeds the timeout limit', function(done) {
+    const pool = new Pool({ timeout: 100 });
+    const task = pool.wrap(() => {})();
+    pool.on('timeout', (emitted) => {
+      assert.equal(task, emitted);
+      done();
+    });
+  });
 });
