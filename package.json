@@ -1,21 +1,31 @@
 {
   "name": "task-pool",
-  "version": "0.0.2",
-  "description": "A generic pool to limit number of running asynchronous tasks.",
-  "keywords": ["task", "pool", "queue", "async"],
+  "version": "0.1.0",
+  "description": "A generic pool to limit number of running asynchronous tasks or promises.",
+  "keywords": [
+    "task",
+    "pool",
+    "queue",
+    "promise",
+    "async"
+  ],
   "author": "Ali Farhadi <a.farhadi@gmail.com>",
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=4.0.0"
   },
   "main": "./lib/pool",
+  "scripts": {
+    "cover": "istanbul cover _mocha",
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/farhadi/task-pool.git"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/farhadi/task-pool/master/LICENSE"
-    }
-  ]
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
+  }
 }
